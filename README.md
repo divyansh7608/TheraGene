@@ -1,2 +1,2 @@
-# TheraGene
-{{ url_for('static', filename='CSS/style.css') }}
+# TheraGene.ai : Personalized Medicine Powered by AI
+TheraGene.ai is an innovative AI-powered platform that leverages advanced machine learning algorithms to deliver personalized healthcare recommendations based on an individual's genetic profile.
