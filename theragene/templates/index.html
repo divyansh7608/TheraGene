@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TheraGene.ai</title>
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/style.css') }}">
 </head>
 <body>
     <header>
         <nav>
-            <img src="Images/Ther1.png" alt="TheraGene.ai" height="60" width="150">
+            <img src="{{ url_for('static', filename='Images/Ther1.png') }}" alt="TheraGene.ai" height="60" width="150">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="contact.html" target="_blank">Contact</a></li>
+                <li><a href="{{ url_for('static', filename='contact.html') }}" target="_blank">Contact</a></li>
                 <li><button id="loginBtn">Login</button></li>
             </ul>
         </nav>
@@ -32,7 +32,7 @@
     </div>
     <div class="hero">
         <div class="im">
-            <img src="Images/docai4.png" alt="Healthcare AI" height="400" width="450" style="border-radius: 5px; border: none;">
+            <img src="{{ url_for('static', filename='Images/docai4.png') }}" alt="Healthcare AI" height="400" width="450" style="border-radius: 5px; border: none;">
         </div>
         <div class="container">
             <h1>Personalized AI-Powered Healthcare</h1>
@@ -43,7 +43,7 @@
     </div>
     <div class="doc">
         <div>
-            <img src="Images/doctor.png" alt="doctor" height="400" width="300">
+            <img src="{{ url_for('static', filename='Images/doctor.png') }}" alt="doctor" height="400" width="300">
         </div>
         <div class="main" style="display: flex; flex-direction: column; align-items: center; width: 500px;">
             <h1 style="text-align: center;">Doctor Is just a Click Away!</h1>
@@ -51,14 +51,14 @@
             <a href="#" class="doc_a">Try Ginee!</a>
         </div>
         <div>
-            <img src="Images/med.png" alt="doctor" height="200" width="150" style="margin-right: 50px;">
+            <img src="{{ url_for('static', filename='Images/med.png') }}" alt="doctor" height="200" width="150" style="margin-right: 50px;">
         </div>
     </div>
     <div id="chatbot">
         <a href="https://www.example.com" id="chatbotLink">
-            <img src="Images/bot.png" alt="Chatbot" id="chatbotBtn">
+            <img src="{{ url_for('static', filename='Images/bot.png') }}" alt="Chatbot" id="chatbotBtn">
         </a>
     </div>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

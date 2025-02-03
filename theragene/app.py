@@ -41,46 +41,6 @@ def home():
     """Landing page route - serves index.html"""
     return render_template('index.html')
 
-@app.route('/chat', methods=['POST'])
-def chat():
-    user_message = request.json['message']
-    
-    # Build conversation context
-    messages = [
-        {"role": "user", "content": "You are a medical intake chatbot. Collect patient information systematically and professionally."}
-    ] + [
-        {"role": "assistant" if msg['is_bot'] else "user", "content": msg['text']} 
-        for msg in conversation_history
-    ] + [
-        {"role": "user", "content": user_message}
-    ]
-
-    try:
-        # Call Claude API
-        response = client.messages.create(
-            model="claude-3-haiku-20240307",
-            max_tokens=300,
-            messages=messages,
-            system="You are a helpful medical intake assistant. Collect patient information carefully and compassionately."
-        )
-        
-        bot_response = response.content[0].text
-
-        # Update conversation history
-        conversation_history.append({
-            'text': user_message,
-            'is_bot': False
-        })
-        conversation_history.append({
-            'text': bot_response,
-            'is_bot': True
-        })
-
-        return jsonify({'response': bot_response})
-
-    except Exception as e:
-        return jsonify({'response': f"Error: {str(e)}"})
-
 @app.route('/about')
 def about():
     """About page route"""
