@@ -3,6 +3,7 @@ TheraGene.ai is an innovative AI-powered platform that leverages advanced machin
 <div class="image-container" 
     style="justify-content: center;
             display:flex;
-            align-items: center;">
+            align-items: center;
+            padding: 50px;">
   <img src="theragene/static/Images/heart.jpg" alt="Alt Text" width="500px" height="500px">
 </div>
