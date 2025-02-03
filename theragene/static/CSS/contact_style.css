@@ -1,0 +1,51 @@
+.customer-service {
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+.customer-service h1,
+.customer-service h2 {
+    text-align: center;
+}
+
+.customer-service p {
+    text-align: center;
+    font-size: 18px;
+}
+
+#inquiryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#inquiryForm label,
+#inquiryForm input,
+#inquiryForm textarea,
+#inquiryForm button {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+#inquiryForm input,
+#inquiryForm textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#inquiryForm button {
+    padding: 10px 20px;
+    background-color: #1b263b;
+    color: #e0e1dd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#inquiryForm button:hover {
+    background-color: #415a77;
+}
