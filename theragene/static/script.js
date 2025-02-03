@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("TheraGene.ai website is loaded!");
-});
-document.addEventListener("DOMContentLoaded", function() {
+
     var modal = document.getElementById("loginModal");
     var btn = document.getElementById("loginBtn");
     var span = document.getElementsByClassName("close")[0];
