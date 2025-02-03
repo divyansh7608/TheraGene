@@ -1,119 +1,132 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 header {
-    background-color: rgb(118 184 198) ;
-    color: black;
-    padding: 2px 0;
+    background-color: #0d1b2a;
+    color: #e0e1dd;
+    padding: 10px 20px;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header h1 {
-    margin: 0;
-    text-align: center;
-}
 
 nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 nav li {
     margin: 0 15px;
 }
 
-nav a {
-    font-weight: 400px;
-    font-size: 18px;
-    color: black;
+nav a, nav button {
+    color: #e0e1dd;
     text-decoration: none;
-}
-li button {
     font-size: 18px;
-    padding: 3px 5px;
-    border-radius: 5px;
-    background-color: aqua;
+    border: none;
+    background: none;
+    cursor: pointer;
 }
-/* div.body {
-    padding: 20px;
-    background-image: url("Images/docai.jpg");
-} */
-/*  */
-.hero{
-    padding: 20px 200px 10px 10px;
-    background-image: linear-gradient(to right,#6ab7cd,#ADD8E6);
-    background-blend-mode: multiply;
-    background-size: cover;
-    width: auto 100%;
-    height: 650px;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+nav button {
+    padding: 10px 20px;
+    background-color: #1b263b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #415a77;
+}
+
+.hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 50px 20px;
+    background: linear-gradient(to right, #415a77, #1b263b);
+    color: #e0e1dd;
 }
-.im img{
+
+.hero .container {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero .container a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    color: #e0e1dd;
+    background-color: #0d1b2a;
     border-radius: 5px;
+    text-decoration: none;
+    font-size: 30px;
+    transition: background-color 0.3s ease;
 }
-.container{
-    color: white;
-    width: 600px;
+
+.hero .container a:hover {
+    background-color: #778da9;
+}
+.container h1{
+    font-size: 60px;
+}
+
+.doc {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #e0e1dd;
 }
-.container a{
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    background-color: black;
-    padding: 5px 10px;
-    border-radius: 10px;
-}
-div h1{
-    font-size: 50px;
 
+.doc_a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    color: #e0e1dd;
+    background-color: #0d1b2a;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
 }
-footer {
-    background-color: #f1f1ea;
-    color: white;
-    text-align: center;
-    padding: 2px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+
+.doc_a:hover {
+    background-color: #778da9;
 }
-/* Modal styles */
+
+/* Modal */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .close {
@@ -128,4 +141,27 @@ footer {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Floating Chatbot Button */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#chatbotBtn {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#chatbotBtn:hover {
+    transform: scale(1.2);
+}
+
+#chatbotLink {
+    display: block;
 }
