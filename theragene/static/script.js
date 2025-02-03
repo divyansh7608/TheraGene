@@ -18,6 +18,11 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = "none";
         }
     }
+    document.getElementById('loginModal').style.display = 'flex';
+
+    function closeModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
 
     document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();
