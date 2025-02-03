@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #f1f1ea;
+    background-color: rgb(118 184 198) ;
     color: black;
     padding: 2px 0;
 }
@@ -47,12 +47,43 @@ li button {
     padding: 20px;
     background-image: url("Images/docai.jpg");
 } */
+/*  */
 .hero{
-    background-image: url("../Images/docai.jpg");
+    padding: 20px 200px 10px 10px;
+    background-image: linear-gradient(to right,#6ab7cd,#ADD8E6);
+    background-blend-mode: multiply;
+    background-size: cover;
     width: auto 100%;
     height: 650px;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.im img{
+    border-radius: 5px;
+}
+.container{
+    color: white;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.container a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+div h1{
+    font-size: 50px;
+
 }
 footer {
     background-color: #f1f1ea;
